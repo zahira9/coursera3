@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Photo Gallery</title>
+    <style>
+        #image {
+            width: 400px;
+            height: 300px;
+            border: 2px solid #ccc;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .preview img {
+            width: 100px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .preview img:focus {
+            outline: 2px solid blue;
+        }
+    </style>
+</head>
+<body onload="initializeGallery()">
+    <h1>Interactive Photo Gallery</h1>
+    <div id="image" role="region" aria-label="Image preview">
+        Hover over an image below to display here
+    </div>
+    <div class="preview">
+        <img src="image1.jpg" alt="Description of Image 1" tabindex="0" onmouseover="update(this)" onmouseout="cancel()" onfocus="update(this)" onblur="cancel()">
+        <img src="image2.jpg" alt="Description of Image 2" tabindex="0" onmouseover="update(this)" onmouseout="cancel()" onfocus="update(this)" onblur="cancel()">
+        <img src="image3.jpg" alt="Description of Image 3" tabindex="0" onmouseover="update(this)" onmouseout="cancel()" onfocus="update(this)" onblur="cancel()">
+        <img src="image4.jpg" alt="Description of Image 4" tabindex="0" onmouseover="update(this)" onmouseout="cancel()" onfocus="update(this)" onblur="cancel()">
+        <img src="image5.jpg" alt="Description of Image 5" tabindex="0" onmouseover="update(this)" onmouseout="cancel()" onfocus="update(this)" onblur="cancel()">
+        <img src="image6.jpg" alt="Description of Image 6" tabindex="0" onmouseover="update(this)" onmouseout="cancel()" onfocus="update(this)" onblur="cancel()">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
